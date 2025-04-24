@@ -1,7 +1,27 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
-  /* config options here */
+  dangerouslyAllowSVG:true,
+
+  images: {
+    domains: ["encrypted-tbn0.gstatic.com", "gstatic.com"],
+    remotePatterns: [
+      {
+        protocol: 'https',
+        hostname: 'placehold.co',
+        pathname: '/**',
+      },
+    ],
+  },
+  experimental:{
+    ppr:'incremental',
+  },
+  devIndicators:{
+    appIsrStatus:true,
+    buildActivity:true,
+    buildActivityPosition:"bottom-right",
+  }
+
 };
 
 export default nextConfig;
