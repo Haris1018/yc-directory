@@ -24,13 +24,17 @@ const page = async({params}:{params:Promise<{id:string}>}) => {
     </section>
   
     <section className="section_container">
-      <Image
+     <div className='flex justify-center items-center w-full'>
+     <Image
         src={post.image}
         alt="thumbnail"
-        width={200}
-        height={100}
-        className="w-full h-auto rounded-xl"
+        width={400}
+        height={300}
+        className=" rounded-xl"
       />
+
+     </div>
+     
   
       <div className="space-y-5 mt-10 max-w-4xl mx-auto">
         <div className="flex-between gap-5">
